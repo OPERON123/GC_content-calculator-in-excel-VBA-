@@ -1,0 +1,20 @@
+Function GC_content(seq)
+
+    Dim GC_count As Integer
+
+    seq = LCase(seq)
+
+    For i = 1 To Len(seq):
+        If Mid(seq, i, 1) = "c" Then
+            GC_count = GC_count + 1
+        
+        ElseIf Mid(seq, i, 1) = "g" Then
+            GC_count = GC_count + 1
+            
+        Else
+        End If
+    Next
+    
+    GC_content = GC_count / Len(seq) * 100
+
+End Function
